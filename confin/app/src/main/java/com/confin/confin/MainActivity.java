@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this,Resumo.class));
 
         } else if (id == R.id.nav_compartilhar) {
+            startActivity(new Intent(MainActivity.this,Cidades.class));
 
         } else if (id == R.id.nav_enviar) {
             AlertDialog.Builder msg = (new AlertDialog.Builder(MainActivity.this));

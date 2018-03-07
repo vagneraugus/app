@@ -26,8 +26,13 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="Login"></activity>
-        <activity android:name=".Resumo"></activity>
+            android:label="Login" />
+        <activity android:name=".Resumo" />
+        <activity
+            android:name=".Cidades"
+            android:label="@string/title_activity_cidades"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".kkk"></activity>
     </application>
 
 </manifest>
