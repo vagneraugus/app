@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,8 +30,9 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+//                startActivity(new Intent (MainActivity.this, Receitas.class));
             }
         });
 
@@ -85,14 +87,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_cadastrar) {
             // Handle the camera action
         } else if (id == R.id.nav_despesas) {
-
+            startActivity(new Intent(MainActivity.this, Despesas.class));
         } else if (id == R.id.nav_receitas) {
-
+            startActivity(new Intent (MainActivity.this, Receitas.class));
         } else if (id == R.id.nav_resumo) {
-            startActivity(new Intent(MainActivity.this,Resumo.class));
+//            startActivity(new Intent(MainActivity.this,Resumo.class));
 
         } else if (id == R.id.nav_compartilhar) {
-            startActivity(new Intent(MainActivity.this,Cidades.class));
 
         } else if (id == R.id.nav_enviar) {
             AlertDialog.Builder msg = (new AlertDialog.Builder(MainActivity.this));
@@ -105,5 +106,9 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void dd(MenuItem item) {
+        Toast.makeText(getApplicationContext(),"testes dfksdjflj",Toast.LENGTH_LONG).show();
     }
 }

@@ -32,7 +32,15 @@
             android:name=".Cidades"
             android:label="@string/title_activity_cidades"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".kkk"></activity>
+        <activity android:name=".kkk" />
+        <activity
+            android:name=".Receitas"
+            android:label="@string/title_activity_receitas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Despesas"
+            android:label="@string/title_activity_despesas"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
