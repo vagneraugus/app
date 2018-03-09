@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Geral">
+            <menu>
+                <item
+                    android:id="@+id/nav_cadastrar"
+                    android:icon="@drawable/icon_novo"
+                    android:title="Cadastrar" />
+                <item
+                    android:id="@+id/nav_despesas"
+                    android:icon="@drawable/icon_despesas"
+                    android:title="Despesas" />
+                <item
+                    android:id="@+id/nav_receitas"
+                    android:icon="@drawable/icon_receitas"
+                    android:title="Receitas" />
+                <item
+                    android:id="@+id/nav_resumo"
+                    android:icon="@drawable/icon_resumo"
+                    android:title="Resumo" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Redes sociais">
+        <menu>
+            <item
+                android:id="@+id/nav_compartilhar"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Compartilhar" />
+            <item
+                android:id="@+id/nav_enviar"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Enviar" />
+        </menu>
+    </item>
+
+</menu>
