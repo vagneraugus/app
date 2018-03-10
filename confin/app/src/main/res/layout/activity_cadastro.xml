@@ -9,13 +9,18 @@
     <Button
         android:id="@+id/btnCadastrar"
         style="@style/Widget.AppCompat.Button.Small"
-        android:layout_width="300dp"
-        android:layout_height="44dp"
+        android:layout_width="285dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="57dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
         android:autoText="false"
         android:onClick="LoginActivity"
         android:text="Cadastrar"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="410dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         tools:textAllCaps="false" />
 
     <TextView
@@ -23,18 +28,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
+        android:onClick="@string/title_activity_login"
         android:text="Cadastrar-se"
         app:layout_constraintStart_toStartOf="@+id/btnCadastrar"
         app:layout_constraintTop_toBottomOf="@+id/btnCadastrar" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtEsqueceuSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="8dp"
         android:text="Esqueceu a senha?"
-        android:onClick="onClick"
-        android:clickable="true"
         app:layout_constraintEnd_toEndOf="@+id/btnCadastrar"
         app:layout_constraintTop_toBottomOf="@+id/btnCadastrar" />
 
@@ -78,6 +82,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginTop="31dp"
         android:ems="10"
+        android:hint="Senha"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,9 +93,9 @@
         android:id="@+id/imageView2"
         android:layout_width="166dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="210dp"
         android:layout_marginTop="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/edtEmail"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"

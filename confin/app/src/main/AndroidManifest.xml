@@ -41,7 +41,8 @@
             android:name=".Despesas"
             android:label="@string/title_activity_despesas"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Cadastro"></activity>
+        <activity android:name=".Cadastro" />
+        <activity android:name=".EsqueceuSenha"></activity>
     </application>
 
 </manifest>
