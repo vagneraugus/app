@@ -36,4 +36,6 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
     <string name="titulo_receitas">Receitas</string>
+    <string name="Botao">SALVAR</string>
+    <string name="data">Data</string>
 </resources>
