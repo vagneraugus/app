@@ -10,7 +10,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f4f4f4">
+        android:background="@color/bg">
 
         <Button
             android:id="@+id/btnSalvarReceita"
@@ -82,6 +82,7 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingTop="10dp"
+            android:drawableLeft="@drawable/icon_lupa"
             app:layout_constraintTop_toBottomOf="@+id/materialTextField_Descricao"
             app:mtf_image="@drawable/icon_senha"
             app:mtf_labelColor="@android:color/black"

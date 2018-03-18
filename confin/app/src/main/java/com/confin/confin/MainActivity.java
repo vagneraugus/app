@@ -85,7 +85,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_cadastrar) {
-            // Handle the camera action
+            startActivity(new Intent(MainActivity.this, Categorias.class));
+            
         } else if (id == R.id.nav_despesas) {
             startActivity(new Intent(MainActivity.this, Despesas.class));
         } else if (id == R.id.nav_receitas) {

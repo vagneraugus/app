@@ -1,5 +1,6 @@
 package com.confin.confin;
 
+import android.annotation.SuppressLint;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,17 +18,31 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Despesas extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
+    private Button btnSalvarDespesas;
+    private Button btnLimparDespesas;
+    private Button btnCancelarDespesas;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_despesas);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -44,6 +59,22 @@ public class Despesas extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        btnSalvarDespesas = (Button)findViewById(R.id.btnSavarDespesas);
+        btnCancelarDespesas = (Button)findViewById(R.id.btnCancelarDespesas);
+        btnLimparDespesas = (Button)findViewById(R.id.btnLimparDespesas);
+
+    }
+
+    public void btnSalvarDespesas(View view) {
+        Snackbar.make(view, "A despesa foi cadastrada!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+    }
+
+    public void btnCancelarDespesas(View view) {
+        Snackbar.make(view, "Despesa cancelada!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+    }
+
+    public void btnLimparDespesas(View view) {
+        Snackbar.make(view, "Campos limpos!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {

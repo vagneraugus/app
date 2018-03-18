@@ -16,8 +16,7 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."
     </string>
     <string name="title_activity_cidades">Cidades</string>
     <string name="section_format">Hello World from section: %1$d</string>
@@ -38,4 +37,15 @@
     <string name="titulo_receitas">Receitas</string>
     <string name="Botao">SALVAR</string>
     <string name="data">Data</string>
+
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="email_error_message">Enter valid email</string>
+    <string name="password_error_message">Password length must be 8</string>
+    <string name="descricao">Descrição</string>
+    <string name="Valor">Valor</string>
+    <string name="Situacao">Situação</string>
+    <string name="titulo_categorias">Categorias</string>
+    <string name="title_activity_categorias">Categorias</string>
 </resources>

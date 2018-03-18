@@ -5,7 +5,7 @@
         android:id="@+id/action_lupa"
         android:icon="@drawable/icon_lupa"
         android:orderInCategory="100"
-        android:title="burcas"
+        android:title="buscas"
         app:showAsAction="ifRoom"
         android:onClick="dd"/>
     <item
