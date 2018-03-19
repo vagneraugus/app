@@ -5,12 +5,7 @@
         android:id="@+id/action_lupa"
         android:icon="@drawable/icon_lupa"
         android:orderInCategory="100"
-        android:title="buscas"
+        android:title="buscar"
         app:showAsAction="ifRoom"
         android:onClick="dd"/>
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
 </menu>

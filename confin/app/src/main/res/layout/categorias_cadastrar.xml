@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        android:background="@color/bgList">
+        android:background="@color/bg_white">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilDescricaoLayout"
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
-            android:background="@color/bgList"
+            android:background="@color/bg_white"
             android:onClick="btnSalvarCategorias"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -79,7 +79,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
             android:onClick="btnLimparCategorias"
-            android:background="@color/bgList"
+            android:background="@color/bg_white"
             app:layout_constraintEnd_toStartOf="@+id/btnSavarCategorias"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_limpar" />
@@ -91,7 +91,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
             android:onClick="btnCancelarCategorias"
-            android:background="@color/bgList"
+            android:background="@color/bg_white"
             app:layout_constraintEnd_toStartOf="@+id/btnLimparCategorias"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_cancel" />

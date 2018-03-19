@@ -38,7 +38,8 @@
         <activity
             android:name=".Categorias"
             android:label="Categorias"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Cadastros"></activity>
     </application>
 
 </manifest>

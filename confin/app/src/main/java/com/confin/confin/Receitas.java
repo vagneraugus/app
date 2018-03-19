@@ -41,6 +41,19 @@ public class Receitas extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
     }
 
+    public void btnSalvarReceitas(View view) {
+        Snackbar.make(view, "A Receita foi cadastrada!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+    }
+
+    public void btnCancelarReceitas(View view) {
+        Snackbar.make(view, "O cadastro da receita foi cancelado!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+    }
+
+    public void btnLimparReceitas(View view) {
+
+        Snackbar.make(view, "Campos limpos!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+    }
+
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);

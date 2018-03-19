@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        android:background="@color/bgList">
+        android:background="@color/bg_white">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilDescricaoLayout"
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
-            android:background="@color/bgList"
+            android:background="@color/bg_white"
             android:onClick="btnSalvarDespesas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -101,7 +101,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
             android:onClick="btnLimparDespesas"
-            android:background="@color/bgList"
+            android:background="@color/bg_white"
             app:layout_constraintEnd_toStartOf="@+id/btnSavarDespesas"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_limpar" />
@@ -113,7 +113,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
             android:onClick="btnCancelarDespesas"
-            android:background="@color/bgList"
+            android:background="@color/bg_white"
             app:layout_constraintEnd_toStartOf="@+id/btnLimparDespesas"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_cancel" />

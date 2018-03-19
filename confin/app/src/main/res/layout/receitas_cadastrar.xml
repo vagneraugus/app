@@ -5,95 +5,117 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:background="@color/bg"
     tools:layout_editor_absoluteY="81dp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/bg">
+        android:background="@color/bg_white">
 
-        <Button
-            android:id="@+id/btnSalvarReceita"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilDescricaoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:hintTextAppearance="@style/hintText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSavarReceitas">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tietDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:drawableLeft="@drawable/icon_descricao"
+                android:drawablePadding="10dp"
+                android:hint="@string/descricao"
+                android:inputType="text"
+                android:textColor="@color/colorPrimaryDark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilValorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="36dp"
+            app:hintTextAppearance="@style/hintText"
+            app:layout_constraintTop_toBottomOf="@+id/tilDescricaoLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tietValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_valor"
+                android:drawablePadding="10dp"
+                android:hint="@string/Valor"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorPrimaryDark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilSituacaoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="36dp"
+            app:hintTextAppearance="@style/hintText"
+            app:layout_constraintTop_toBottomOf="@+id/tilValorLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tietSituacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_situacao"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="@string/Situacao"
+                android:inputType="text"
+                android:textColor="@color/colorPrimaryDark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/btnSavarReceitas"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/bg_white"
+            android:onClick="btnSalvarReceitas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_salvar" />
+
+        <ImageButton
+            android:id="@+id/btnLimparReceitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="3dp"
-            android:gravity="right"
-            android:text="@string/Botao"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:onClick="btnLimparReceitas"
+            android:background="@color/bg_white"
+            app:layout_constraintEnd_toStartOf="@+id/btnSavarReceitas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_limpar" />
 
-        <com.github.florent37.materialtextfield.MaterialTextField
-            android:id="@+id/materialTextField_data"
-            android:layout_width="384dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSalvarReceita"
-            app:mtf_image="@drawable/icon_senha"
-            app:mtf_labelColor="@android:color/black">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/data"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </com.github.florent37.materialtextfield.MaterialTextField>
-
-        <com.github.florent37.materialtextfield.MaterialTextField
-            android:id="@+id/materialTextField_Descricao"
-            android:layout_width="384dp"
+        <ImageButton
+            android:id="@+id/btnCancelarReceitas"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/materialTextField_data"
-            app:mtf_image="@drawable/icon_senha"
-            app:mtf_labelColor="@android:color/black"
-            tools:layout_editor_absoluteX="0dp">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Descrição"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </com.github.florent37.materialtextfield.MaterialTextField>
-
-        <com.github.florent37.materialtextfield.MaterialTextField
-            android:id="@+id/materialTextField_valor"
-            android:layout_width="384dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:paddingTop="10dp"
-            android:drawableLeft="@drawable/icon_lupa"
-            app:layout_constraintTop_toBottomOf="@+id/materialTextField_Descricao"
-            app:mtf_image="@drawable/icon_senha"
-            app:mtf_labelColor="@android:color/black"
-            tools:layout_editor_absoluteX="0dp">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Valor"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </com.github.florent37.materialtextfield.MaterialTextField>
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:onClick="btnCancelarReceitas"
+            android:background="@color/bg_white"
+            app:layout_constraintEnd_toStartOf="@+id/btnLimparReceitas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_cancel" />
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

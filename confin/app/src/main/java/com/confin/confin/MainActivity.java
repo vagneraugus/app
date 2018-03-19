@@ -1,5 +1,6 @@
 package com.confin.confin;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,13 +17,48 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private AlertDialog.Builder opcaoCadastrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final CharSequence[] opcoesCadastro = {
+                "CATEGORIAS",
+                "CONDIÇÃO DE PGTO",
+                "DESPESAS",
+                "RECEITAS",
+                "SUBCATEGORIAS"
+        };
+        opcaoCadastrar = new AlertDialog.Builder(MainActivity.this);
+        opcaoCadastrar.setTitle("O que você deseja cadastrar?");
+        opcaoCadastrar.setCancelable(false);
+        opcaoCadastrar.setItems(opcoesCadastro, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int selecionado) {
+                if (opcoesCadastro[selecionado].equals("CATEGORIAS")){
+                    startActivity(new Intent(MainActivity.this, Categorias.class));
+                }else
+                    if (opcoesCadastro[selecionado].equals("CONDIÇÃO DE PGTO")){
+//                    startActivity(new Intent(MainActivity.this, Categorias.class));
+                    Toast.makeText(getApplicationContext(),"Condição de PGTO selecionado", Toast.LENGTH_LONG).show();
+                }else
+                    if (opcoesCadastro[selecionado].equals("DESPESAS")){
+                    startActivity(new Intent(MainActivity.this, Despesas.class));
+                }else
+                    if (opcoesCadastro[selecionado].equals("RECEITAS")){
+                    startActivity(new Intent(MainActivity.this, Receitas.class));
+                }else
+                    if (opcoesCadastro[selecionado].equals("SUBCATEGORIAS")){
+//                    startActivity(new Intent(MainActivity.this, Subcategorias.class));
+                    Toast.makeText(getApplicationContext(),"subcategorias selecionado", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        opcaoCadastrar.setNegativeButton("Cancelar", null);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -30,9 +66,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
-//                startActivity(new Intent (MainActivity.this, Receitas.class));
+                opcaoCadastrar.create().show();
             }
         });
 
@@ -85,23 +119,18 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_cadastrar) {
-            startActivity(new Intent(MainActivity.this, Categorias.class));
-            
+//            startActivity(new Intent(MainActivity.this, Cadastros.class));
+            opcaoCadastrar.create().show();
+
         } else if (id == R.id.nav_despesas) {
             startActivity(new Intent(MainActivity.this, Despesas.class));
         } else if (id == R.id.nav_receitas) {
             startActivity(new Intent (MainActivity.this, Receitas.class));
         } else if (id == R.id.nav_resumo) {
-//            startActivity(new Intent(MainActivity.this,Resumo.class));
 
         } else if (id == R.id.nav_compartilhar) {
 
         } else if (id == R.id.nav_enviar) {
-            AlertDialog.Builder msg = (new AlertDialog.Builder(MainActivity.this));
-            msg.setTitle("teste");
-            msg.setMessage("mensaggem enviada com sucesso");
-            msg.create();
-            msg.show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
