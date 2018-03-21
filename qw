@@ -1,0 +1,77 @@
+[33mcommit 44f478e5ece7a0d19d382f46202eff0ad778ac02[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Tue Mar 20 22:48:34 2018 -0300
+
+    nova tela de login criada
+
+[33mcommit 850384404bc5748a9ecb20e99e2e423ad58314f7[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Mon Mar 19 17:00:06 2018 -0300
+
+     Modificado o menu de cadastro usado if else para switch
+
+[33mcommit ea0ac68894a062a838d89bb365c3cd402e1236aa[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Mon Mar 19 16:19:30 2018 -0300
+
+    Add no projeto o D.E.R
+
+[33mcommit 3c516345e849ad7ac495dccfc512b2ad104569e6[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Mon Mar 19 16:14:42 2018 -0300
+
+    Criado menu de cadastros usando alertDialog
+
+[33mcommit f67ba7b33d98a2e067c4bb0d93ebf3597427e16f[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Sun Mar 18 15:54:43 2018 -0300
+
+    criado a tela de categorias
+
+[33mcommit 6f33fdbce922297bbf23ce6c4fa2fd5e61a0f265[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Fri Mar 9 22:33:16 2018 -0300
+
+    apgado pastas que foram criadas sem querer
+
+[33mcommit 651a9229d519302fd37c6362f58ea7ebf92b7a38[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Fri Mar 9 22:04:32 2018 -0300
+
+    adicionado os edittexts na activity cadadastro receitas
+
+[33mcommit e694ea60a37bdf7ef5797951acc96b55ccc316e3[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Fri Mar 9 00:19:40 2018 -0300
+
+    apagado readme
+
+[33mcommit f6b477044028d807bcbc4c2bf3cbdb724ede33d4[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Fri Mar 9 00:08:51 2018 -0300
+
+    odelos de formularios
+
+[33mcommit 180e7f790f631018af8da5c844b07f3644301757[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Thu Mar 8 10:13:27 2018 -0300
+
+    Criado Intents action bar top navigation de Despesas, Receitas
+
+[33mcommit 82fbd689292ea6e34b9d85d1f8c1671a62325998[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Tue Mar 6 22:44:01 2018 -0300
+
+    Desfeita alterações mostradas Robson
+
+[33mcommit 3e3e1f125837f1e9a0fa2a08509814aabf8692f4[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Tue Mar 6 21:08:30 2018 -0300
+
+    escolha do layout
+
+[33mcommit 88f35686341bde2cd2e91775bb616d2083c1ec92[m
+Author: vagneraugus <vagneraugus@gmail.com>
+Date:   Tue Mar 6 00:39:29 2018 -0300
+
+    app criado
