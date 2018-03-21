@@ -28,122 +28,126 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         //---------------------------- MENU DE CADASTROS ALERT_DIALOG ------------------------------
-            final CharSequence[] opcoesCadastro = { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS" };
+        final CharSequence[] opcoesCadastro = { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS" };
 
-            opcaoCadastrar = new AlertDialog.Builder(MainActivity.this);
-            opcaoCadastrar.setTitle("O que você deseja cadastrar?");
-            opcaoCadastrar.setNegativeButton("Cancelar", null);
-            opcaoCadastrar.setCancelable(false);
-            opcaoCadastrar.setItems(opcoesCadastro, new DialogInterface.OnClickListener()
+        opcaoCadastrar = new AlertDialog.Builder(MainActivity.this);
+        opcaoCadastrar.setTitle("O que você deseja cadastrar?");
+        opcaoCadastrar.setNegativeButton("Cancelar", null);
+        opcaoCadastrar.setCancelable(false);
+        opcaoCadastrar.setItems(opcoesCadastro, new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int selecionado)
             {
-                public void onClick(DialogInterface dialog, int selecionado)
-                    {
-                        switch (selecionado)
-                        {
-                            case 0:
-                                startActivity(new Intent(MainActivity.this, Categorias.class));
-                                break;
-                            case 1:
-                                // startActivity(new Intent(MainActivity.this, CondPgto.class));
-                                Toast.makeText(getApplicationContext(),"Condição de PGTO selecionado", Toast.LENGTH_LONG).show();
-                                break;
-                            case 2:
-                                startActivity(new Intent(MainActivity.this, Despesas.class));
-                                break;
-                            case 3:
-                                startActivity(new Intent(MainActivity.this, Receitas.class));
-                                break;
-                            case 4:
-                                // startActivity(new Intent(MainActivity.this, Categorias.class));
-                                Toast.makeText(getApplicationContext(),"Condição de PGTO selecionado", Toast.LENGTH_LONG).show();
-                                break;
-                        }
-                    }
-            });
+                switch (selecionado)
+                {
+                    case 0:
+                        startActivity(new Intent(MainActivity.this, Categorias.class));
+                        break;
+                    case 1:
+                        // startActivity(new Intent(MainActivity.this, CondPgto.class));
+                        Toast.makeText(getApplicationContext(),"Condição de PGTO selecionado", Toast.LENGTH_LONG).show();
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, Despesas.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, Receitas.class));
+                        break;
+                    case 4:
+                        // startActivity(new Intent(MainActivity.this, Categorias.class));
+                        Toast.makeText(getApplicationContext(),"Condição de PGTO selecionado", Toast.LENGTH_LONG).show();
+                        break;
+                }
+            }
+        });
         //------------------------------------------------------------------------------------------
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //-----------------------------------BOTAO FLUTUANTE DE ADD --------------------------------
-            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-            fab.setOnClickListener(new View.OnClickListener()
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
             {
-                @Override
-                public void onClick(View view)
-                    {
-                        opcaoCadastrar.create().show();
-                    }
-            });
+                opcaoCadastrar.create().show();
+            }
+        });
         //----------------------------------- FIM BOTAO FLUTUANTE DE ADD ---------------------------
 
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawer.addDrawerListener(toggle);
-            toggle.syncState();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
-            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-            navigationView.setNavigationItemSelectedListener(this);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
-            @Override
-            public void onBackPressed() {
-                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                if (drawer.isDrawerOpen(GravityCompat.START)) {
-                    drawer.closeDrawer(GravityCompat.START);
-                } else {
-                    super.onBackPressed();
-                }
-            }
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
-            @Override
-            public boolean onCreateOptionsMenu(Menu menu)
-                {
-                    // Inflate the menu; this adds items to the action bar if it is present.
-                    getMenuInflater().inflate(R.menu.main, menu);
-                    return true;
-                }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
-            @Override
-            public boolean onOptionsItemSelected(MenuItem item)
-            {
-                // Handle action bar item clicks here. The action bar will
-                // automatically handle clicks on the Home/Up button, so long
-                // as you specify a parent activity in AndroidManifest.xml.
-                int id = item.getItemId();
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
-                //noinspection SimplifiableIfStatement
-                if (id == R.id.action_settings) {
-                    return true;
-                }
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
 
-                return super.onOptionsItemSelected(item);
-            }
+        return super.onOptionsItemSelected(item);
+    }
 
     //---------------------------------- MENU LATERAL FLUTUANTE DE ADD -----------------------------
-        @SuppressWarnings("StatementWithEmptyBody")
-        @Override
-        public boolean onNavigationItemSelected(MenuItem item)
-            {
-                int id = item.getItemId();
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item)
+    {
+        int id = item.getItemId();
 
-                if (id == R.id.nav_cadastrar) {
-                    opcaoCadastrar.create().show();
-                } else if (id == R.id.nav_despesas) {
-                    startActivity(new Intent(MainActivity.this, Despesas.class));
-                } else if (id == R.id.nav_receitas) {
-                    startActivity(new Intent (MainActivity.this, Receitas.class));
-                } else if (id == R.id.nav_resumo) {
+        if (id == R.id.nav_cadastrar) {
+            opcaoCadastrar.create().show();
+        } else if (id == R.id.nav_despesas) {
+            startActivity(new Intent(MainActivity.this, Despesas.class));
+        } else if (id == R.id.nav_receitas) {
+            startActivity(new Intent (MainActivity.this, Receitas.class));
+        } else if (id == R.id.nav_resumo) {
 
-                } else if (id == R.id.nav_compartilhar) {
+        } else if (id == R.id.nav_compartilhar) {
 
-                } else if (id == R.id.nav_enviar) {
-                }
+        } else if (id == R.id.nav_enviar) {
+            startActivity( new Intent(MainActivity.this, Login.class));
+        }
 
-                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                drawer.closeDrawer(GravityCompat.START);
-                return true;
-            }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
     //----------------------------------- FIM MENU LATERAL FLUTUANTE DE ADD ------------------------
+    public void dd(MenuItem item) {
+        Toast.makeText(getApplicationContext(),"testes dfksdjflj",Toast.LENGTH_LONG).show();
+    }
 }
