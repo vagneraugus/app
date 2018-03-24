@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,8 +28,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         //---------------------------- MENU DE CADASTROS ALERT_DIALOG ------------------------------
-        final CharSequence[] opcoesCadastro = { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS", "Cadastra-se" };
+        final CharSequence[] opcoesCadastro = { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS", "Tela Inicial"  };
 
         opcaoCadastrar = new AlertDialog.Builder(MainActivity.this);
         opcaoCadastrar.setTitle("O que você deseja cadastrar?");
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         Toast.makeText(getApplicationContext(),"Condição de PGTO selecionado", Toast.LENGTH_LONG).show();
                         break;
                     case 5:
-                        startActivity(new Intent(MainActivity.this, Cadastro.class));
+                        startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
                         break;
                 }
             }
@@ -152,5 +155,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     //----------------------------------- FIM MENU LATERAL FLUTUANTE DE ADD ------------------------
     public void dd(MenuItem item) {
         Toast.makeText(getApplicationContext(),"testes dfksdjflj",Toast.LENGTH_LONG).show();
+    }
+
+
+    public void btnTelaCadastro(View view) {
+        startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
     }
 }
