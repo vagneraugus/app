@@ -14,7 +14,7 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">Endereço de e-mail inválido.</string>
     <string name="error_invalid_password">Senha muito curta</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_incorrect_password">A senha esta incorreta.</string>
     <string name="error_field_required">Este campo é obrigatório!</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."
     </string>

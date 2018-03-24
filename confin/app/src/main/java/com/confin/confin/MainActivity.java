@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         //---------------------------- MENU DE CADASTROS ALERT_DIALOG ------------------------------
-        final CharSequence[] opcoesCadastro = { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS" };
+        final CharSequence[] opcoesCadastro = { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS", "Cadastra-se" };
 
         opcaoCadastrar = new AlertDialog.Builder(MainActivity.this);
         opcaoCadastrar.setTitle("O que você deseja cadastrar?");
@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case 4:
                         // startActivity(new Intent(MainActivity.this, Categorias.class));
                         Toast.makeText(getApplicationContext(),"Condição de PGTO selecionado", Toast.LENGTH_LONG).show();
+                        break;
+                    case 5:
+                        startActivity(new Intent(MainActivity.this, Cadastro.class));
                         break;
                 }
             }
