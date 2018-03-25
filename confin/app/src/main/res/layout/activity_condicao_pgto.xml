@@ -11,18 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        android:background="@color/bg_white">
+        android:background="@color/bg_white"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelarDespesas"
+        app:layout_constraintStart_toStartOf="@+id/btnCancelarDespesas">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilDescricaoLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="55dp"
             app:hintTextAppearance="@style/hintText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSavarDespesas">
+            app:layout_constraintTop_toTopOf="parent">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tietDescricao"
@@ -30,48 +32,27 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:drawableLeft="@drawable/icon_descricao"
+                android:drawableLeft="@drawable/ic_cartao_credito"
                 android:drawablePadding="10dp"
-                android:hint="@string/descricao"
+                android:hint="@string/condicao_pgto"
                 android:inputType="text"
                 android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilValorLayout"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="36dp"
             app:hintTextAppearance="@style/hintText"
-            app:layout_constraintTop_toBottomOf="@+id/tilDescricaoLayout"
-            tools:layout_editor_absoluteX="0dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilDescricaoLayout">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tietValor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/icon_valor"
-                android:drawablePadding="10dp"
-                android:hint="@string/Valor"
-                android:inputType="numberDecimal"
-                android:textColor="@color/colorPrimaryDark" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/tilValorLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="131dp"
-            app:hintTextAppearance="@style/hintText"
-            app:layout_constraintTop_toBottomOf="@+id/tilDescricaoLayout"
-            tools:layout_editor_absoluteX="0dp">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/tietParcela"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_parcela"
@@ -83,14 +64,15 @@
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSituacaoLayout"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="36dp"
             app:hintTextAppearance="@style/hintText"
-            app:layout_constraintTop_toBottomOf="@+id/tilValorLayout"
-            tools:layout_editor_absoluteX="0dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilValorLayout">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/tietSituacao"
@@ -122,8 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
-            android:onClick="btnLimparDespesas"
             android:background="@color/bg_white"
+            android:onClick="btnLimparDespesas"
             app:layout_constraintEnd_toStartOf="@+id/btnSavarDespesas"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_limpar" />
@@ -134,10 +116,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
-            android:onClick="btnCancelarDespesas"
             android:background="@color/bg_white"
+            android:onClick="btnCancelarDespesas"
             app:layout_constraintEnd_toStartOf="@+id/btnLimparDespesas"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_cancel" />
-    </android.support.constraint.ConstraintLayout>
-</ScrollView>
+
+    </android.support.constraint.ConstraintLayout></ScrollView>

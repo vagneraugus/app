@@ -16,6 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,10 +30,84 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Botao chamar tela Cadastro inical
+        final Button button = findViewById(R.id.btnTelaCadastro);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
+            }
+        });
+        //fim do botão
 
+        //Botao chamar tela Cadastro inical
+        final ImageButton imgbCartaoCedito = findViewById(R.id.ibCartaoCredito);
+        imgbCartaoCedito.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Condicao_pgto.class));
+            }
+        });
+        //fim do botão
+
+        //Botao chamar tela Cadastro inical
+        final ImageButton imgbCadastrar = findViewById(R.id.ibCadastrar);
+        imgbCadastrar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
+            }
+        });
+        //fim do botão
+
+        //Botao chamar tela Cadastro inical
+        final ImageButton imgbApelidoCartao = findViewById(R.id.imgbApelidoCartao);
+        imgbApelidoCartao.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Cadastro_cartao.class));
+            }
+        });
+        //fim do botão
+
+        //Tela despesa
+        final ImageButton imgbDespesa = findViewById(R.id.imgbDespesa);
+        imgbDespesa.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Despesas.class));
+            }
+        });
+
+        //Tela despesa
+        final ImageButton imgbReceita = findViewById(R.id.imgbReceita);
+        imgbReceita.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Receitas.class));
+            }
+        });
+
+        //Tela categoria
+        final ImageButton imgbCategoria = findViewById(R.id.imgbCategoria);
+        imgbCategoria.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Categorias.class));
+            }
+        });
+
+        //Tela subcategoria
+        final ImageButton imgbSubCategoria = findViewById(R.id.imgbSubCategoria);
+        imgbSubCategoria.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SubCategoria.class));
+            }
+        });
+
+        //Tela despesa
+        final ImageButton imgbResumo = findViewById(R.id.imgbResumo);
+        imgbResumo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Resumo.class));
+            }
+        });
 
         //---------------------------- MENU DE CADASTROS ALERT_DIALOG ------------------------------
-        final CharSequence[] opcoesCadastro = { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS", "Tela Inicial"  };
+        final CharSequence[] opcoesCadastro = { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS", "Tela Inicial", "Parcela"  };
 
         opcaoCadastrar = new AlertDialog.Builder(MainActivity.this);
         opcaoCadastrar.setTitle("O que você deseja cadastrar?");
@@ -62,6 +138,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         break;
                     case 5:
                         startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(MainActivity.this, Condicao_pgto.class));
                         break;
                 }
             }
@@ -158,7 +237,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    public void btnTelaCadastro(View view) {
-        startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
-    }
+
+
+
 }

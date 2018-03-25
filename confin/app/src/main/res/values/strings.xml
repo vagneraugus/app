@@ -48,4 +48,10 @@
     <string name="titulo_categorias">Categorias</string>
     <string name="title_activity_categorias">Categorias</string>
     <string name="senha">Senha</string>
+    <string name="qtde_parcela">Quantidade de parcela(s)</string>
+    <string name="condicao_pgto">Condição de pagamento</string>
+    <string name="forma_pgto">Forma de pagamento</string>
+    <string name="numero_parcelas">Número de parcela(s)</string>
+    <string name="cartao_DC">Digite um nome para o cartão</string>
+    <string name="data_vencimento">Data de vencimento</string>
 </resources>

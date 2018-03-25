@@ -17,7 +17,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Receitas"
             android:label="@string/title_activity_receitas"
@@ -40,7 +40,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Cadastro_Inicial"></activity>
+        <activity android:name=".Cadastro_Inicial" />
+        <activity android:name=".Condicao_pgto" />
+        <activity android:name=".Cadastro_cartao" />
+        <activity android:name=".SubCategoria" />
+        <activity android:name=".Resumo"></activity>
     </application>
 
 </manifest>
