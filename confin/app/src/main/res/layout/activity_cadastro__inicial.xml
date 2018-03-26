@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/telaCadastroInicial"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
@@ -35,9 +36,9 @@
                 android:drawableLeft="@drawable/icon_email"
                 android:drawablePadding="10dp"
                 android:hint="@string/email"
-                android:textColorHint="@color/colorPrimaryDark"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -107,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="40dp"
             android:text="Manter conectado"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tilSituacaoLayout" />
@@ -116,8 +117,8 @@
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="32dp"
             android:text="Switch"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tilSituacaoLayout" />

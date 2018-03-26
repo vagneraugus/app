@@ -24,6 +24,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_despesas">Despesas</string>
+    <string name="title_activity_cadastro_inicial">Cadastrar-se</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -36,6 +37,7 @@
     <string name="titulo_receitas">Receitas</string>
     <string name="Botao">SALVAR</string>
     <string name="data">Data</string>
+    <string name="titulo_cadastrar">Cadastra-se</string>
 
     <string name="login">Login</string>
     <string name="email">E-mail</string>
@@ -54,4 +56,6 @@
     <string name="numero_parcelas">Número de parcela(s)</string>
     <string name="cartao_DC">Digite um nome para o cartão</string>
     <string name="data_vencimento">Data de vencimento</string>
+    <string name="subcategotia">Subcategoria</string>
+    <string name="categoria">Categoria</string>
 </resources>

@@ -30,9 +30,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:drawableLeft="@drawable/icon_descricao"
+                android:drawableLeft="@drawable/icon_categoria"
                 android:drawablePadding="10dp"
-                android:hint="@string/descricao"
+                android:hint="@string/categoria"
                 android:inputType="text"
                 android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
@@ -52,10 +52,10 @@
                 android:id="@+id/tietValor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/icon_valor"
+                android:drawableLeft="@drawable/icon_subcategoria"
                 android:drawablePadding="10dp"
-                android:hint="@string/Valor"
-                android:inputType="numberDecimal"
+                android:hint="@string/subcategotia"
+                android:inputType="text"
                 android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
@@ -74,10 +74,10 @@
                 android:id="@+id/tietParcela"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_parcela"
+                android:drawableLeft="@drawable/icon_descricao"
                 android:drawablePadding="10dp"
-                android:hint="@string/numero_parcelas"
-                android:inputType="number"
+                android:hint="@string/descricao"
+                android:inputType="text"
                 android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
