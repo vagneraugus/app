@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Botao chamar tela Cadastro inical
+       /* //Botao chamar tela Cadastro inical
         final Button button = findViewById(R.id.btnTelaCadastro);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
             }
         });
-        //fim do botão
+        //fim do botão*/
 
         //Botao chamar tela Cadastro inical
         final ImageButton imgbCartaoCedito = findViewById(R.id.ibCartaoCredito);
@@ -103,6 +103,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         imgbResumo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Resumo.class));
+            }
+        });
+
+        //Tela vencto cartao
+
+        final ImageButton imgbResumoVenctoCartao = findViewById(R.id.imgbResumoVenctoCartao);
+        imgbResumoVenctoCartao.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Resumo_data_vencto_cartao.class));
             }
         });
 

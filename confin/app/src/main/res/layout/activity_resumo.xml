@@ -1,9 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.confin.confin.Resumo">
+    android:background="@color/bg"
+    android:fillViewport="true">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:background="@color/bg_white">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilDescricaoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:hintTextAppearance="@style/hintText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSavarDespesas">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tietDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:drawableLeft="@drawable/icon_descricao"
+                android:drawablePadding="10dp"
+                android:hint="@string/descricao"
+                android:inputType="text"
+                android:textColor="@color/colorPrimaryDark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilValorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="36dp"
+            app:hintTextAppearance="@style/hintText"
+            app:layout_constraintTop_toBottomOf="@+id/tilDescricaoLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tietValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_valor"
+                android:drawablePadding="10dp"
+                android:hint="@string/Valor"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorPrimaryDark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilValorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="131dp"
+            app:hintTextAppearance="@style/hintText"
+            app:layout_constraintTop_toBottomOf="@+id/tilDescricaoLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tietParcela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_parcela"
+                android:drawablePadding="10dp"
+                android:hint="@string/numero_parcelas"
+                android:inputType="number"
+                android:textColor="@color/colorPrimaryDark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilSituacaoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="36dp"
+            app:hintTextAppearance="@style/hintText"
+            app:layout_constraintTop_toBottomOf="@+id/tilValorLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tietSituacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_situacao"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="@string/Situacao"
+                android:inputType="text"
+                android:textColor="@color/colorPrimaryDark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/btnSavarDespesas"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/bg_white"
+            android:onClick="btnSalvarDespesas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_salvar" />
+
+        <ImageButton
+            android:id="@+id/btnLimparDespesas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:onClick="btnLimparDespesas"
+            android:background="@color/bg_white"
+            app:layout_constraintEnd_toStartOf="@+id/btnSavarDespesas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_limpar" />
+
+        <ImageButton
+            android:id="@+id/btnCancelarDespesas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:onClick="btnCancelarDespesas"
+            android:background="@color/bg_white"
+            app:layout_constraintEnd_toStartOf="@+id/btnLimparDespesas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_cancel" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
