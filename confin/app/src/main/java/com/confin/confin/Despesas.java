@@ -93,4 +93,38 @@ public class Despesas extends AppCompatActivity {
             return 2;
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_despesas, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+       /* if (id == R.id.menu_novo){
+            Pessoa p = new Pessoa();
+            p.setId(UUID.randomUUID().toString());
+            p.setNome(campoNome.getText().toString());
+            p.setEmail(campoEmail.getText().toString());
+            databaseReference.child("Pessoa").child(p.getId()).setValue(p);
+            limparCampos();
+        }else if (id == R.id.menu_atualizar){
+            Pessoa p = new Pessoa();
+            p.setId(pessoaSelecionada.getId());
+            p.setNome(campoNome.getText().toString().trim());
+            p.setEmail(campoEmail.getText().toString().trim());
+            databaseReference.child("Pessoa").child(p.getId()).setValue(p);
+            limparCampos();
+        }else if (id == R.id.menu_deletar){
+            Pessoa p = new Pessoa();
+            p.setId(pessoaSelecionada.getId());
+            databaseReference.child("Pessoa").child(p.getId()).removeValue();
+            limparCampos();
+        }*/
+
+        return  true;
+    }
+
 }

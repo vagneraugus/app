@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "402241821888",
+    "firebase_url": "https://confinance-bade6.firebaseio.com",
+    "project_id": "confinance-bade6",
+    "storage_bucket": "confinance-bade6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402241821888:android:243ddcd2eb384ce9",
+        "android_client_info": {
+          "package_name": "com.confin.confin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402241821888-71o78oi1vh40pkalps1sd26k7k81qkvb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.confin.confin",
+            "certificate_hash": "a00810a1d15f77993d41d5a70802b36c6de724b8"
+          }
+        },
+        {
+          "client_id": "402241821888-a4t3cu7j1ervb80n3fk0btgkcidntfkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFC2sc-J7-8iYqeyzSoNJ8qXtXpb2YeA4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402241821888-a4t3cu7j1ervb80n3fk0btgkcidntfkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

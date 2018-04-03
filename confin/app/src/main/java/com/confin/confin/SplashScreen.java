@@ -36,7 +36,7 @@ public class SplashScreen extends Activity {
                             updateProgress(waited);
                         }
                     }
-                    startActivity( new Intent(SplashScreen.this, MainActivity.class));
+                    startActivity( new Intent(SplashScreen.this, Login.class));
                     finish();
                 }catch (InterruptedException e){
 //                    em caso de erro

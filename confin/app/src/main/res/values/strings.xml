@@ -58,4 +58,6 @@
     <string name="data_vencimento">Data de vencimento</string>
     <string name="subcategotia">Subcategoria</string>
     <string name="categoria">Categoria</string>
+    <string name="nome">nome</string>
+    <string name="Pegunta_secreta">Pergunta secreta</string>
 </resources>
