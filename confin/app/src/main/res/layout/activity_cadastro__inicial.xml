@@ -4,59 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/telaCadastroInicial"
     android:layout_width="match_parent"
+    android:background="@drawable/fundo"
     android:layout_height="match_parent"
-    android:background="@color/bg"
     android:fillViewport="true">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="8dp"
-        android:background="@color/bg_white"
-        app:layout_constraintEnd_toStartOf="@+id/btnCancelarCategorias"
-        app:layout_constraintStart_toStartOf="@+id/btnCancelarCategorias">
-
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/tilNomeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            app:hintTextAppearance="@style/hintText"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/id_campoNome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:drawableLeft="@drawable/icon_email"
-                android:drawablePadding="10dp"
-                android:hint="@string/nome"
-                android:inputType="text"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark" />
-        </android.support.design.widget.TextInputLayout>
+        android:layout_height="wrap_content">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilDescricaoLayout"
-            android:layout_width="match_parent"
+            android:layout_width="308dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="120dp"
+            android:orientation="horizontal"
             app:hintTextAppearance="@style/hintText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilNomeLayout">
+            app:layout_constraintTop_toTopOf="parent">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/id_campoEmail"
+                android:id="@+id/id_email_cadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:drawableLeft="@drawable/icon_email"
                 android:drawablePadding="10dp"
                 android:hint="@string/email"
@@ -67,76 +37,72 @@
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSenhaLayout"
-            android:layout_width="338dp"
+            android:layout_width="308dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/hintText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tilDescricaoLayout"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="15dp">
+            app:passwordToggleTint="@color/colorPrimaryDark">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/id_campoSenha"
+                android:id="@+id/id_senha_cadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_senha"
                 android:drawablePadding="10dp"
-                android:drawableRight="@drawable/icon_senha"
                 android:hint="@string/senha"
                 android:inputType="textPassword"
                 android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/tilPerguntaSecretaLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:hintTextAppearance="@style/hintText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilSenhaLayout">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/id_campoPergSecreta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:drawableLeft="@drawable/icon_email"
-                android:drawablePadding="10dp"
-                android:hint="@string/Pegunta_secreta"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark" />
-        </android.support.design.widget.TextInputLayout>
-
 
         <Button
-            android:id="@+id/id_btnCancelar"
-            android:layout_width="103dp"
+            android:id="@+id/id_btn_cancelar_cadastro"
+            android:layout_width="308dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:text="Cancelar"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/botao_cancelar"
+            android:elevation="10dp"
+            android:text="cancelar"
+            android:textColor="@color/bg_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_btn_cadastrar_usuario"
+            app:layout_constraintVertical_bias="0.07" />
 
         <Button
-            android:id="@+id/id_btnCadastrar"
-            android:layout_width="wrap_content"
+            android:id="@+id/id_btn_cadastrar_usuario"
+            android:layout_width="308dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/botao_cadastrar"
+            android:elevation="10dp"
             android:text="Cadastrar"
-            app:layout_constraintBottom_toTopOf="@+id/id_btnCancelar"
+            android:textColor="@color/bg_white"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilPerguntaSecretaLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/tilSenhaLayout" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="16dp"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_btn_cancelar_cadastro"
+            app:layout_constraintVertical_bias="0.117" />
+
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

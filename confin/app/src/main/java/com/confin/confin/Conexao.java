@@ -24,7 +24,7 @@ public class Conexao {
         return firebaseAuth;
     }
 
-    private static void inicializarFirebaseAuth(){
+    private static void inicializarFirebaseAuth() {
         firebaseAuth = FirebaseAuth.getInstance();
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override

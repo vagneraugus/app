@@ -18,20 +18,14 @@ public class Cadastro_Inicial extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private Button btn_cadastrar, btn_cancelar;
-    private EditText campo_nome, campo_email, campo_senha, campo_perSecreta;
+    private EditText campo_email, campo_senha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro__inicial);
 
-        btn_cadastrar     = (Button)findViewById(R.id.id_btnCadastrar);
-        btn_cancelar      = (Button)findViewById(R.id.id_btnCancelar);
-        campo_nome        = (EditText)findViewById(R.id.id_campoNome);
-        campo_email       = (EditText)findViewById(R.id.id_campoEmail);
-        campo_senha       = (EditText)findViewById(R.id.id_campoSenha);
-        campo_perSecreta  = (EditText)findViewById(R.id.id_campoPergSecreta);
-
+        inicializaComponentes();
         botoes();
     }
 
@@ -45,33 +39,37 @@ public class Cadastro_Inicial extends AppCompatActivity {
         btn_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                String nome        = campo_nome.getText().toString().trim();
-                String email       = campo_email.getText().toString().trim();
-                String senha       = campo_senha.getText().toString().trim();
-//                String pergSecreta = campo_perSecreta.getText().toString().trim();
-
-                criarUser(email, senha);
+                String email = campo_email.getText().toString().trim();
+                String senha = campo_senha.getText().toString().trim();
+                criauser(email, senha);
             }
         });
     }
 
-    private void criarUser(String email, String senha) {
+    private void criauser(String email, String senha) {
         auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(Cadastro_Inicial.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    mensagem("Novo usuário cadastrado!");
+                if (task.isSuccessful()) {
+                    alert("Usuário cadastrado!");
                     startActivity(new Intent(Cadastro_Inicial.this, MainActivity.class));
                     finish();
                 }else{
-                    mensagem("Erro ao cadastrar usuário!");
+                    alert("Erro ao cadastrar usuário!");
                 }
             }
         });
     }
 
-    private void mensagem(String msg){
-        Toast.makeText(getApplicationContext(), msg,Toast.LENGTH_LONG).show();
+    private void alert(String msg){
+        Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+    }
+
+    private void inicializaComponentes() {
+        btn_cadastrar = (Button)findViewById(R.id.id_btn_cadastrar_usuario);
+        btn_cancelar = (Button)findViewById(R.id.id_btn_cancelar_cadastro);
+        campo_email    = (EditText)findViewById(R.id.id_email_cadastrar);
+        campo_senha   = (EditText)findViewById(R.id.id_senha_cadastrar);
     }
 
     @Override
@@ -79,4 +77,58 @@ public class Cadastro_Inicial extends AppCompatActivity {
         super.onStart();
         auth = Conexao.getFirebaseAuth();
     }
+
+/*    private void botoes() {
+        btn_cadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email       = campo_email.getText().toString().trim();
+                String senha       = campo_senha.getText().toString().trim();
+                criarUser(email, senha);
+            }
+        });
+
+        btn_cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+
+    public void criarUser(String email, String senha) {
+        auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(Cadastro_Inicial.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                try {
+                    if (task.isComplete()){
+                        msg("Sucesso ao cadastrar");
+                        startActivity(new Intent(Cadastro_Inicial.this, MainActivity.class));
+                        finish();
+                    }else{
+                        msg("Erro ao cadastrar");
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    private void msg(String alerta) {
+        Toast.makeText(getApplicationContext(),alerta,Toast.LENGTH_LONG).show();
+    }
+
+    private void inicializaComponentes() {
+        campo_email = (EditText)findViewById(R.id.id_campoEmail_cadastrar);
+        campo_senha = (EditText)findViewById(R.id.id_campoSenha_cadastrar);
+        btn_cadastrar = (Button)findViewById(R.id.id_btnCadastrar_usuario);
+        btn_cancelar = (Button)findViewById(R.id.id_btnCancelar_cadastro);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        auth = Conexao.getFirebaseAuth();
+    }*/
 }

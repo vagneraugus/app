@@ -28,26 +28,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private FirebaseAuth auth;
     private FirebaseUser user;
-
     private AlertDialog.Builder opcaoCadastrar;
-
-    private TextView cod_usuario, nome_usuario, email_usuario;
-    private Button btn_logout;
+    private TextView cod_usuario, email_usuario, nome_usuario;
+    private Button btn_logout, btn_nome_usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-       /* //Botao chamar tela Cadastro inical
-        final Button button = findViewById(R.id.btnTelaCadastro);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
-            }
-        });
-        //fim do botão*/
 
         //--------------------------------- LINKS MENU LATERAL ------------------------------------
             //Botao chamar tela Cadastro inical
@@ -57,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     startActivity(new Intent(MainActivity.this, Condicao_pgto.class));
                 }
             });
-            //fim do botão
 
             //Botao chamar tela Cadastro inical
             final ImageButton imgbCadastrar = findViewById(R.id.ibCadastrar);
@@ -66,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     startActivity(new Intent(MainActivity.this, Cadastro_Inicial.class));
                 }
             });
-            //fim do botão
 
             //Botao chamar tela Cadastro inical
             final ImageButton imgbApelidoCartao = findViewById(R.id.imgbApelidoCartao);
@@ -75,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     startActivity(new Intent(MainActivity.this, Cadastro_cartao.class));
                 }
             });
-            //fim do botão
 
             //Tela despesa
             final ImageButton imgbDespesa = findViewById(R.id.imgbDespesa);
@@ -193,11 +179,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setNavigationItemSelectedListener(this);
 
         //-------------------------------- ID, NOME, EMAIL do usuaril logado -----------------------
-            cod_usuario = (TextView)findViewById(R.id.id_usuario);
-            nome_usuario = (TextView)findViewById(R.id.id_nome_usuario);
+            cod_usuario = (TextView)findViewById(R.id.id_cod_usuario);
             email_usuario = (TextView)findViewById(R.id.id_email_usuario);
-
-        //--------------------------------------- BOTAO DE LOGOUT ----------------------------------
+            btn_nome_usuario = (Button)findViewById(R.id.btn_nome_usuario);
+            nome_usuario = (TextView)findViewById(R.id.recebe_nome_usuario);
+            btn_nome_usuario.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nome_usuario.setText("vagner");
+                }
+            });
             btn_logout = (Button)findViewById(R.id.id_btn_logout);
             btn_logout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -206,6 +197,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     finish();
                 }
             });
+
     }
 
     @Override
@@ -213,16 +205,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onStart();
         auth = Conexao.getFirebaseAuth();
         user = Conexao.getFirebaseUser();
-
         verificaUser();
     }
 
-    public void verificaUser(){
+    private void verificaUser() {
         if (user == null){
             finish();
         }else{
             cod_usuario.setText("Código: " + user.getUid());
-            email_usuario.setText("Email: " + user.getEmail());
+            email_usuario.setText("E-mail: " + user.getEmail());
         }
     }
 
@@ -285,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             drawer.closeDrawer(GravityCompat.START);
             return true;
         }
-    //----------------------------------- FIM MENU LATERAL FLUTUANTE DE ADD ------------------------
+    //----------------------------------------------------------------------------------------------
     public void dd(MenuItem item) {
         Toast.makeText(getApplicationContext(),"testes dfksdjflj",Toast.LENGTH_LONG).show();
     }
