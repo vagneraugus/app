@@ -104,40 +104,6 @@
                 android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
-        <ImageButton
-            android:id="@+id/btnSavarDespesas"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="15dp"
-            android:background="@color/bg_white"
-            android:onClick="btnSalvarDespesas"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_salvar" />
 
-        <ImageButton
-            android:id="@+id/btnLimparDespesas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="15dp"
-            android:onClick="btnLimparDespesas"
-            android:background="@color/bg_white"
-            app:layout_constraintEnd_toStartOf="@+id/btnSavarDespesas"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_limpar" />
-
-        <ImageButton
-            android:id="@+id/btnCancelarDespesas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_marginTop="15dp"
-            android:onClick="btnCancelarDespesas"
-            android:background="@color/bg_white"
-            app:layout_constraintEnd_toStartOf="@+id/btnLimparDespesas"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_cancel" />
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

@@ -54,7 +54,8 @@
         <activity android:name=".Cadastro_cartao" />
         <activity android:name=".SubCategoria" />
         <activity android:name=".Resumo" />
-        <activity android:name=".Resumo_data_vencto_cartao" />
+        <activity android:name=".Resumo_data_vencto_cartao"
+            android:label="Data vencimento cartões"/>
         <activity android:name=".ResetSenha"></activity>
     </application>
 
