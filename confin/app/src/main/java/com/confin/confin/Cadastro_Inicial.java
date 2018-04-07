@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,7 +58,7 @@ public class Cadastro_Inicial extends AppCompatActivity {
     }
 
     private void criarUser(String email, String senha) {
-        auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(Cadastro_Inicial.this, new OnCompleteListener<AuthResult>() {
+       auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(Cadastro_Inicial.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
@@ -70,6 +72,27 @@ public class Cadastro_Inicial extends AppCompatActivity {
         });
     }
 
+    //teste robson
+    public static boolean validateNotNull(View pView, String pMessage) {
+        if (pView instanceof EditText) {
+            EditText edText = (EditText) pView;
+            Editable text = edText.getText();
+            if (text != null) {
+                String strText = text.toString();
+                if (!TextUtils.isEmpty(strText)) {
+                    return true;
+                }
+            }
+            // em qualquer outra condição é gerado um erro
+            edText.setError(pMessage);
+            edText.setFocusable(true);
+            edText.requestFocus();
+            return false;
+        }
+        return false;
+    }
+//Fim teste Robson
+    
     private void mensagem(String msg){
         Toast.makeText(getApplicationContext(), msg,Toast.LENGTH_LONG).show();
     }

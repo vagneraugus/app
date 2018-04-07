@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:drawableLeft="@drawable/icon_email"
+                android:drawableLeft="@drawable/ic_action_pessoa"
                 android:drawablePadding="10dp"
                 android:hint="@string/nome"
                 android:inputType="text"
@@ -67,7 +67,8 @@
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSenhaLayout"
-            android:layout_width="338dp"
+            android:drawableRight="@drawable/icon_email"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/hintText"
@@ -81,9 +82,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="10dp"
-                android:drawableRight="@drawable/icon_senha"
+                android:drawableLeft="@drawable/icon_senha"
                 android:hint="@string/senha"
                 android:inputType="textPassword"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 

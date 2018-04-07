@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Login extends Activity {
@@ -24,7 +25,9 @@ public class Login extends Activity {
         btn_Cadastrar_se = (TextView)findViewById(R.id.id_btnCadastrar_se);
     }
 
+
     public void cadastrar_se(View view) {
         startActivity(new Intent(Login.this, Cadastro_Inicial.class));
     }
+
 }

@@ -23,9 +23,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:drawableLeft="@drawable/icon_descricao"
+            android:drawableLeft="@drawable/icon_email"
             android:drawablePadding="10dp"
-            android:hint="@string/descricao"
+            android:hint="@string/email"
             android:inputType="text"
             android:textColor="@color/colorPrimaryDark" />
     </android.support.design.widget.TextInputLayout>
@@ -47,10 +47,12 @@
             android:id="@+id/tietValor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_valor"
+            android:drawableLeft="@drawable/icon_senha"
+            android:drawableRight="@drawable/ic_mostrarsenha"
+            app:passwordToggleEnabled="true"
+            android:inputType="textPassword"
             android:drawablePadding="10dp"
-            android:hint="@string/Valor"
-            android:inputType="numberDecimal"
+            android:hint="@string/senha"
             android:textColor="@color/colorPrimaryDark" />
     </android.support.design.widget.TextInputLayout>
 
