@@ -10,39 +10,7 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-<<<<<<< HEAD
         android:layout_height="wrap_content">
-=======
-        android:layout_height="match_parent"
-        android:layout_margin="8dp"
-        android:background="@color/bg_white"
-        app:layout_constraintEnd_toStartOf="@+id/btnCancelarCategorias"
-        app:layout_constraintStart_toStartOf="@+id/btnCancelarCategorias">
-
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/tilNomeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            app:hintTextAppearance="@style/hintText"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/id_campoNome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:drawableLeft="@drawable/ic_action_pessoa"
-                android:drawablePadding="10dp"
-                android:hint="@string/nome"
-                android:inputType="text"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark" />
-        </android.support.design.widget.TextInputLayout>
->>>>>>> db5101339b0a4265afd674cfd45de6b6f40276b2
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilDescricaoLayout"
@@ -69,12 +37,7 @@
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSenhaLayout"
-<<<<<<< HEAD
             android:layout_width="308dp"
-=======
-            android:drawableRight="@drawable/icon_email"
-            android:layout_width="match_parent"
->>>>>>> db5101339b0a4265afd674cfd45de6b6f40276b2
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:hintTextAppearance="@style/hintText"
@@ -90,14 +53,8 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/icon_senha"
                 android:drawablePadding="10dp"
-<<<<<<< HEAD
-=======
-                android:drawableLeft="@drawable/icon_senha"
->>>>>>> db5101339b0a4265afd674cfd45de6b6f40276b2
                 android:hint="@string/senha"
                 android:inputType="textPassword"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
