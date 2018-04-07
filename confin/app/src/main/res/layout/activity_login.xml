@@ -31,7 +31,7 @@
                 android:drawablePadding="10dp"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/bg_white"
                 android:textColorHint="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
@@ -55,7 +55,7 @@
                 android:drawablePadding="10dp"
                 android:hint="@string/senha"
                 android:inputType="textPassword"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/bg_white" />
         </android.support.design.widget.TextInputLayout>
 
         <Button

@@ -60,4 +60,5 @@
     <string name="categoria">Categoria</string>
     <string name="nome">Nome</string>
     <string name="Pegunta_secreta">Pergunta secreta</string>
+    <string name="Confirma_senha">Confirmar senha</string>
 </resources>
