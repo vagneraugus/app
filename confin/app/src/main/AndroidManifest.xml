@@ -61,7 +61,12 @@
         <activity android:name=".Resumo" />
         <activity android:name=".Resumo_data_vencto_cartao"
             android:label="Data vencimento cartões"/>
-        <activity android:name=".ResetSenha"></activity>
+        <activity
+            android:name=".ResetSenha"
+            android:label="Recuperar senha"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation">
+        </activity>
     </application>
 
 </manifest>

@@ -61,4 +61,5 @@
     <string name="nome">Nome</string>
     <string name="Pegunta_secreta">Pergunta secreta</string>
     <string name="Confirma_senha">Confirmar senha</string>
+    <string name="email_alterar">Informe o e-mail que deseja recuperar a senha</string>
 </resources>
