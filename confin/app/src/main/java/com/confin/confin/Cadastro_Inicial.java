@@ -2,6 +2,7 @@ package com.confin.confin;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ public class Cadastro_Inicial extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private Button btn_cadastrar, btn_cancelar;
-    private EditText campo_email, campo_senha, campo_senhaconfii;
+    private TextInputEditText campo_email, campo_senha, campo_confirma_senha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,20 +40,19 @@ public class Cadastro_Inicial extends AppCompatActivity {
         btn_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if(campo_email.getText().length()==0) {
                     Toast.makeText(getApplication(), "Campo de e-mail não preenchido, verifique!", Toast.LENGTH_LONG).show();
-                }else if(campo_senhaconfii.getText().length()==0) {
-                        Toast.makeText(getApplication(), "Senha não preenchida, verifique!", Toast.LENGTH_LONG).show();
-                }else if(campo_senha.equals(!campo_senhaconfii.equals(campo_senhaconfii))) {
-                    Toast.makeText(getApplication(), "Senhas não conferem, verifique!", Toast.LENGTH_LONG).show();
-                }
-                else{
 
+                }else if((campo_confirma_senha.getText().length()==0) || (campo_senha.getText().length()==0)) {
+                    Toast.makeText(getApplication(), "Campo de e-mail ou senha não preenchido, verifique!", Toast.LENGTH_LONG).show();
+
+                }else if (campo_senha.getText().toString() != campo_confirma_senha.getText().toString()) {
+                    Toast.makeText(getApplication(), "Senhas não xconferem, verifique!", Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(getApplication(), "Foi cadastrado um usuário com o e-mail" + campo_email.getText(), Toast.LENGTH_LONG).show();
                     String email = campo_email.getText().toString().trim();
                     String senha = campo_senha.getText().toString().trim();
                     criauser(email, senha);
-
                 }
             }
         });
@@ -62,8 +62,6 @@ public class Cadastro_Inicial extends AppCompatActivity {
         auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(Cadastro_Inicial.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-
-
                 if (task.isSuccessful()) {
                     alert("Usuário cadastrado!");
                     startActivity(new Intent(Cadastro_Inicial.this, MainActivity.class));
@@ -80,11 +78,11 @@ public class Cadastro_Inicial extends AppCompatActivity {
     }
 
     private void inicializaComponentes() {
-        btn_cadastrar = (Button)findViewById(R.id.id_btn_cadastrar_usuario);
-        btn_cancelar = (Button)findViewById(R.id.id_btn_cancelar_cadastro);
-        campo_email    = (EditText)findViewById(R.id.id_email_cadastrar);
-        campo_senha   = (EditText)findViewById(R.id.id_senha_cadastrar);
-        campo_senhaconfii = (EditText)findViewById(R.id.id_senha_confii);
+        btn_cadastrar        = (Button)findViewById(R.id.id_btn_cadastrar_usuario);
+        btn_cancelar         = (Button)findViewById(R.id.id_btn_cancelar_cadastro);
+        campo_email          = (TextInputEditText)findViewById(R.id.id_email_cadastrar);
+        campo_senha          = (TextInputEditText)findViewById(R.id.id_senha_cadastrar);
+        campo_confirma_senha = (TextInputEditText)findViewById(R.id.id_senha_confirma);
     }
 
     @Override

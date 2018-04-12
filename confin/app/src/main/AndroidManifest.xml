@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/teste_logo"
+        android:icon="@drawable/logo"
         android:label="Con-Finance"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -37,20 +37,24 @@
             android:screenOrientation="portrait"
             android:configChanges="orientation"
             android:label="Login" />
-        <activity android:name=".SplashScreen"
-            android:screenOrientation="portrait"
-            android:configChanges="orientation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".Cadastro_Inicial"
             android:label="Cadastrar-se"
             android:screenOrientation="portrait"
             android:configChanges="orientation">
         </activity>
+
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".Condicao_pgto" />
         <activity android:name=".Cadastro_cartao" />
         <activity android:name=".SubCategoria" />
