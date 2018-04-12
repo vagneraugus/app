@@ -114,8 +114,8 @@ campo_senha.setError("O campo senha não pode ficar vazio!");
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
 
-                    campo_email.setText("");
-                    campo_senha.setText("");
+                    /*campo_email.setText("");
+                    campo_senha.setText("");*/
                     campo_email.requestFocus();
 
                     Toast.makeText(getApplication(), "Bem vindo! "+ email, Toast.LENGTH_LONG).show();
@@ -123,8 +123,8 @@ campo_senha.setError("O campo senha não pode ficar vazio!");
                     startActivity(new Intent( Login.this, MainActivity.class));
                 }else{
                     atencao("E-mail ou senha incorretos, tente novamente!");
-                    campo_email.setText("");
-                    campo_senha.setText("");
+                    /*campo_email.setText("");
+                    campo_senha.setText("");*/
                     campo_email.requestFocus();
                 }
             }
