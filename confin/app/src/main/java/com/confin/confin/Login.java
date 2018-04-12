@@ -52,11 +52,11 @@ public class Login extends Activity {
             @Override
             public void onClick(View view) {
                 if(campo_email.getText().length()==0) {
-                    Toast.makeText(getApplication(), "Campo de e-mail não está preenchido, verifique!", Toast.LENGTH_LONG).show();
-
+                    //Toast.makeText(getApplication(), "Campo de e-mail não está preenchido, verifique!", Toast.LENGTH_LONG).show();
+campo_email.setError("O campo e-mail não pode ficar vazio!");
                 }else if((campo_senha.getText().length()==0)) {
-                    Toast.makeText(getApplication(), "Campo de senha não está preenchido, verifique!", Toast.LENGTH_LONG).show();
-
+                   // Toast.makeText(getApplication(), "Campo de senha não está preenchido, verifique!", Toast.LENGTH_LONG).show();
+campo_senha.setError("O campo senha não pode ficar vazio!");
                 }else{
                     String email = campo_email.getText().toString().trim();
                     String senha = campo_senha.getText().toString().trim();
