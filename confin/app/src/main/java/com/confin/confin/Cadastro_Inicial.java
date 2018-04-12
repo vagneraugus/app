@@ -46,9 +46,9 @@ public class Cadastro_Inicial extends AppCompatActivity {
                 }else if((campo_confirma_senha.getText().length()==0) || (campo_senha.getText().length()==0)) {
                     Toast.makeText(getApplication(), "Campo de e-mail ou senha não preenchido, verifique!", Toast.LENGTH_LONG).show();
 
-                }else if (campo_senha.getText().toString() != campo_confirma_senha.getText().toString()) {
+                }/*else if (campo_senha.getText().toString() != campo_confirma_senha.getText().toString()) {
                     Toast.makeText(getApplication(), "Senhas não xconferem, verifique!", Toast.LENGTH_LONG).show();
-                }else {
+                }*/else {
                     Toast.makeText(getApplication(), "Foi cadastrado um usuário com o e-mail" + campo_email.getText(), Toast.LENGTH_LONG).show();
                     String email = campo_email.getText().toString().trim();
                     String senha = campo_senha.getText().toString().trim();

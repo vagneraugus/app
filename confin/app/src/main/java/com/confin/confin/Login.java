@@ -51,10 +51,13 @@ public class Login extends Activity {
         bnt_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if((campo_email.getText().length()==0) || (campo_senha.getText().length()==0) || (campo_senha.getText().length()==0)) {
-                    Toast.makeText(getApplication(), "Campo de e-mail ou senha não preenchido, verifique!", Toast.LENGTH_LONG).show();
-                }else {
-                    Toast.makeText(getApplication(), "Bem vindo!"+" Usuário XXX", Toast.LENGTH_LONG).show();
+                if(campo_email.getText().length()==0) {
+                    Toast.makeText(getApplication(), "Campo de e-mail não está preenchido, verifique!", Toast.LENGTH_LONG).show();
+
+                }else if((campo_senha.getText().length()==0)) {
+                    Toast.makeText(getApplication(), "Campo de senha não está preenchido, verifique!", Toast.LENGTH_LONG).show();
+
+                }else{
                     String email = campo_email.getText().toString().trim();
                     String senha = campo_senha.getText().toString().trim();
                     login(email, senha);
@@ -98,7 +101,7 @@ public class Login extends Activity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(getApplication(), "Bem vindo!"+ email, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplication(), "Bem vindo! "+ email, Toast.LENGTH_LONG).show();
                     startActivity(new Intent( Login.this, MainActivity.class));
                 }else{
 //                    alerta("Usuario ou senha incorretos!");
