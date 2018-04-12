@@ -79,7 +79,7 @@ public class Login extends Activity {
         btn_esqueceu_senha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Snackbar.make(view, "Cara, como você pode esquecer a senha!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+                startActivity( new Intent(Login.this, ResetSenha.class));
             }
         });
 
