@@ -61,6 +61,14 @@ public class Login extends Activity {
                 Snackbar.make(view, "Cara, como você pode esquecer a senha!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
             }
         });
+        btn_manterLogado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                startActivity( new Intent(Login.this, MainActivity.class));
+                Snackbar.make(view, "Cara, como você pode esquecer a senha!", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+
+            }
+        });
 
     }
 

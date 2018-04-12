@@ -18,7 +18,7 @@ public class Cadastro_Inicial extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private Button btn_cadastrar, btn_cancelar;
-    private EditText campo_email, campo_senha;
+    private EditText campo_email, campo_senha, campo_senhaconfii;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +39,21 @@ public class Cadastro_Inicial extends AppCompatActivity {
         btn_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = campo_email.getText().toString().trim();
-                String senha = campo_senha.getText().toString().trim();
-                criauser(email, senha);
+
+                if(campo_email.getText().length()==0) {
+                    Toast.makeText(getApplication(), "Campo de e-mail não preenchido, verifique!", Toast.LENGTH_LONG).show();
+                }else if(campo_senhaconfii.getText().length()==0) {
+                        Toast.makeText(getApplication(), "Senha não preenchida, verifique!", Toast.LENGTH_LONG).show();
+                }else if(campo_senha.equals(!campo_senhaconfii.equals(campo_senhaconfii))) {
+                    Toast.makeText(getApplication(), "Senhas não conferem, verifique!", Toast.LENGTH_LONG).show();
+                }
+                else{
+
+                    String email = campo_email.getText().toString().trim();
+                    String senha = campo_senha.getText().toString().trim();
+                    criauser(email, senha);
+
+                }
             }
         });
     }
@@ -50,6 +62,8 @@ public class Cadastro_Inicial extends AppCompatActivity {
         auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(Cadastro_Inicial.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
+
                 if (task.isSuccessful()) {
                     alert("Usuário cadastrado!");
                     startActivity(new Intent(Cadastro_Inicial.this, MainActivity.class));
@@ -70,6 +84,7 @@ public class Cadastro_Inicial extends AppCompatActivity {
         btn_cancelar = (Button)findViewById(R.id.id_btn_cancelar_cadastro);
         campo_email    = (EditText)findViewById(R.id.id_email_cadastrar);
         campo_senha   = (EditText)findViewById(R.id.id_senha_cadastrar);
+        campo_senhaconfii = (EditText)findViewById(R.id.id_senha_confii);
     }
 
     @Override
