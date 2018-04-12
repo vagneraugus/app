@@ -52,9 +52,10 @@ public class Login extends Activity {
         bnt_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
+
                 String email = campo_email.getText().toString().trim();
                 String senha = campo_senha.getText().toString().trim();
+                login(email, senha);
 
                 if (campo_email.getText().toString().trim().isEmpty() || campo_email == null) {
 //                    Snackbar.make(view, "O campo e-mail não pode ficar vazio!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
@@ -63,7 +64,7 @@ public class Login extends Activity {
 //                    Snackbar.make(view, "O campo senha não pode ficar vazio!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                     campo_senha.setError("O campo senha não pode ficar vazio!");
                 }else{
-=======
+
                 if(campo_email.getText().length()==0) {
                     //Toast.makeText(getApplication(), "Campo de e-mail não está preenchido, verifique!", Toast.LENGTH_LONG).show();
 campo_email.setError("O campo e-mail não pode ficar vazio!");
@@ -71,11 +72,8 @@ campo_email.setError("O campo e-mail não pode ficar vazio!");
                    // Toast.makeText(getApplication(), "Campo de senha não está preenchido, verifique!", Toast.LENGTH_LONG).show();
 campo_senha.setError("O campo senha não pode ficar vazio!");
                 }else{
-                    String email = campo_email.getText().toString().trim();
-                    String senha = campo_senha.getText().toString().trim();
->>>>>>> f90adae6dadfa950abd5d300b7ad2d511e100ac6
-                    login(email, senha);
-                }
+
+                }}
             }
         });
 
@@ -115,13 +113,13 @@ campo_senha.setError("O campo senha não pode ficar vazio!");
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-<<<<<<< HEAD
+
                     campo_email.setText("");
                     campo_senha.setText("");
                     campo_email.requestFocus();
-=======
+
                     Toast.makeText(getApplication(), "Bem vindo! "+ email, Toast.LENGTH_LONG).show();
->>>>>>> f90adae6dadfa950abd5d300b7ad2d511e100ac6
+
                     startActivity(new Intent( Login.this, MainActivity.class));
                 }else{
                     atencao("E-mail ou senha incorretos, tente novamente!");
