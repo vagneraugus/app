@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
@@ -53,7 +54,16 @@ public class Login extends Activity {
             public void onClick(View view) {
                 String email = campo_email.getText().toString().trim();
                 String senha = campo_senha.getText().toString().trim();
-                login(email, senha);
+
+                if (campo_email.getText().toString().trim().isEmpty() || campo_email == null) {
+//                    Snackbar.make(view, "O campo e-mail não pode ficar vazio!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                    campo_email.setError("O campo e-mail não pode ficar vazio!");
+                } else if (campo_senha.getText().toString().trim().isEmpty() || campo_senha == null) {
+//                    Snackbar.make(view, "O campo senha não pode ficar vazio!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                    campo_senha.setError("O campo senha não pode ficar vazio!");
+                }else{
+                    login(email, senha);
+                }
             }
         });
 
@@ -93,22 +103,22 @@ public class Login extends Activity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+                    campo_email.setText("");
+                    campo_senha.setText("");
+                    campo_email.requestFocus();
                     startActivity(new Intent( Login.this, MainActivity.class));
                 }else{
-//                    alerta("Usuario ou senha incorretos!");
-                    atencao("E-mail ou senha, estão incorretos, verifique!");
+                    atencao("E-mail ou senha incorretos, tente novamente!");
+                    campo_email.setText("");
+                    campo_senha.setText("");
+                    campo_email.requestFocus();
                 }
             }
         });
     }
 
     private void atencao(String mensagem) {
-        atencao = new AlertDialog.Builder(Login.this);
-        atencao.setCancelable(false);
-        atencao.setTitle("Atençao!");
-        atencao.setMessage(mensagem);
-        atencao.setPositiveButton("OK", null);
-        atencao.create().show();
+        Toast.makeText(Login.this,mensagem,Toast.LENGTH_LONG).show();
     }
 
     private void alerta(String msg) {

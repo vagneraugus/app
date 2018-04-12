@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         //--------------------------------- LINKS MENU LATERAL ------------------------------------
-            //Botao chamar tela Cadastro inical
+           /* //Botao chamar tela Cadastro inical
             final ImageButton imgbCartaoCedito = findViewById(R.id.ibCartaoCredito);
             imgbCartaoCedito.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     startActivity(new Intent(MainActivity.this, Resumo_data_vencto_cartao.class));
                 }
             });
-
+*/
         //---------------------------- MENU DE CADASTROS ALERT_DIALOG ------------------------------
             final CharSequence[] opcoesCadastro =
                     { "CATEGORIAS", "CONDIÇÃO DE PGTO", "DESPESAS", "RECEITAS", "SUBCATEGORIAS", "HOME", "PARCELA"  };
@@ -189,14 +190,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     nome_usuario.setText("vagner");
                 }
             });
-            btn_logout = (Button)findViewById(R.id.id_btn_logout);
-            btn_logout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Conexao.logOut();
-                    finish();
-                }
-            });
 
     }
 
@@ -214,6 +207,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }else{
             cod_usuario.setText("Código: " + user.getUid());
             email_usuario.setText("E-mail: " + user.getEmail());
+            Toast.makeText(MainActivity.this,"Bem-vindo " + user.getEmail(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -278,6 +272,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     //----------------------------------------------------------------------------------------------
     public void dd(MenuItem item) {
-        Toast.makeText(getApplicationContext(),"testes dfksdjflj",Toast.LENGTH_LONG).show();
+        Conexao.logOut();
+        finish();
     }
 }

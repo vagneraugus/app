@@ -52,7 +52,7 @@ public class Cadastro_Inicial extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    alert("Conta criada com sucesso, seja Bem-vindo!" + campo_email.getText().toString());
+                    alert("Conta criada com sucesso, seja Bem-vindo! " + campo_email.getText().toString());
                     startActivity(new Intent(Cadastro_Inicial.this, MainActivity.class));
                     finish();
                 }else{

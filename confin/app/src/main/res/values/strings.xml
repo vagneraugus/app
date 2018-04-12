@@ -12,6 +12,7 @@
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">Endereço de e-mail inválido.</string>
+    <string name="password_error_message">A senha deve conter 8 caractreres ou mais.</string>
     <string name="error_invalid_password">Senha muito curta</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">Este campo é obrigatório!</string>
@@ -42,8 +43,6 @@
     <string name="login">Login</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
-    <string name="email_error_message">Enter valid email</string>
-    <string name="password_error_message">Password length must be 8</string>
     <string name="descricao">Descrição</string>
     <string name="Valor">Valor</string>
     <string name="Situacao">Situação</string>

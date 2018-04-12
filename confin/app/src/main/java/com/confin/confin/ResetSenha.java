@@ -48,7 +48,7 @@ public class ResetSenha extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
 //                    Snackbar.make(view, "Um e-mail foi enviado para alterar sua senha, verifique sua caixa de e-mail!", Snackbar.LENGTH_LONG).setAction("ACtion",null).show();
-                    atencao("Um e-mail foi enviado para alterar sua senha, verifique sua caixa de e-mail!");
+                    atencao("Um e-mail foi enviado para sua caixa de entrada, verifique sua caixa de e-mail!");
                     finish();
                     startActivity( new Intent(ResetSenha.this, Login.class));
                 }else{
