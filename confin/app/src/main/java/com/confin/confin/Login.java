@@ -52,30 +52,18 @@ public class Login extends Activity {
         bnt_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String email = campo_email.getText().toString().trim();
                 String senha = campo_senha.getText().toString().trim();
-                login(email, senha);
 
                 if (campo_email.getText().toString().trim().isEmpty() || campo_email == null) {
-//                    Snackbar.make(view, "O campo e-mail não pode ficar vazio!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                     campo_email.setError("O campo e-mail não pode ficar vazio!");
                 } else if (campo_senha.getText().toString().trim().isEmpty() || campo_senha == null) {
-//                    Snackbar.make(view, "O campo senha não pode ficar vazio!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                     campo_senha.setError("O campo senha não pode ficar vazio!");
                 }else{
-
-                if(campo_email.getText().length()==0) {
-                    //Toast.makeText(getApplication(), "Campo de e-mail não está preenchido, verifique!", Toast.LENGTH_LONG).show();
-campo_email.setError("O campo e-mail não pode ficar vazio!");
-                }else if((campo_senha.getText().length()==0)) {
-                   // Toast.makeText(getApplication(), "Campo de senha não está preenchido, verifique!", Toast.LENGTH_LONG).show();
-campo_senha.setError("O campo senha não pode ficar vazio!");
-                }else{
-
-                }}
-            }
-        });
+                        login(email, senha);
+                    }
+                }
+            });
 
         btn_cancelar_login.setOnClickListener(new View.OnClickListener() {
             @Override
