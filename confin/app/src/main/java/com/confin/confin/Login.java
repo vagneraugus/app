@@ -103,8 +103,8 @@ public class Login extends Activity {
                 if (task.isSuccessful()){
 
                     /*campo_email.setText("");
-                    campo_senha.setText("");*/
-                    campo_email.requestFocus();
+                    campo_senha.setText("");
+                    campo_email.requestFocus();*/
 
                     Toast.makeText(getApplication(), "Bem vindo! "+ email, Toast.LENGTH_LONG).show();
 
@@ -112,8 +112,8 @@ public class Login extends Activity {
                 }else{
                     atencao("E-mail ou senha incorretos, tente novamente!");
                     /*campo_email.setText("");
-                    campo_senha.setText("");*/
-                    campo_email.requestFocus();
+                    campo_senha.setText("");
+                    campo_email.requestFocus();*/
                 }
             }
         });
