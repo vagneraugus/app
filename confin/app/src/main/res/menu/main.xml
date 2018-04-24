@@ -7,5 +7,5 @@
         android:orderInCategory="100"
         android:title="buscar"
         app:showAsAction="ifRoom"
-        android:onClick="dd"/>
+        android:onClick="sair"/>
 </menu>

@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "402241821888",
-    "firebase_url": "https://confinance-bade6.firebaseio.com",
-    "project_id": "confinance-bade6",
-    "storage_bucket": "confinance-bade6.appspot.com"
+    "project_number": "1092189731364",
+    "firebase_url": "https://cofinance-app.firebaseio.com",
+    "project_id": "cofinance-app",
+    "storage_bucket": "cofinance-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:402241821888:android:243ddcd2eb384ce9",
+        "mobilesdk_app_id": "1:1092189731364:android:243ddcd2eb384ce9",
         "android_client_info": {
           "package_name": "com.confin.confin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "402241821888-71o78oi1vh40pkalps1sd26k7k81qkvb.apps.googleusercontent.com",
+          "client_id": "1092189731364-p6v26li0l0ki8u58qef3o27gljuefjnq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.confin.confin",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "402241821888-a4t3cu7j1ervb80n3fk0btgkcidntfkq.apps.googleusercontent.com",
+          "client_id": "1092189731364-u8al99v009022omecq2lg84khfu9mnvi.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCFC2sc-J7-8iYqeyzSoNJ8qXtXpb2YeA4"
+          "current_key": "AIzaSyAMWeQl9OM6N4rt6LICq3fLfzQLWDSZves"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "402241821888-a4t3cu7j1ervb80n3fk0btgkcidntfkq.apps.googleusercontent.com",
+              "client_id": "1092189731364-u8al99v009022omecq2lg84khfu9mnvi.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

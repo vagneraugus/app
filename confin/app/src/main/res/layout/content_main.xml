@@ -12,207 +12,6 @@
 
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView7"
-        android:layout_width="88dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_nome_usuario"
-        app:layout_constraintEnd_toStartOf="@+id/cardView6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4"
-        app:layout_constraintVertical_bias="0.091"
-        tools:ignore="MissingConstraints">
-
-        <ImageButton
-            android:id="@+id/imgbCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:srcCompat="@drawable/ic_cartao_credito" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:text="Forma PGTO" />
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="88dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView10"
-        tools:ignore="MissingConstraints">
-
-        <ImageButton
-            android:id="@+id/imgbCategoria"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginBottom="2dp"
-            android:background="@drawable/ic_add_usuario"
-            android:scaleType="centerInside"
-            app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toEndOf="@+id/textView8" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:text="Cadastrar" />
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="88dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView3"
-        app:layout_constraintTop_toBottomOf="@+id/cardView10"
-        tools:ignore="MissingConstraints">
-
-        <ImageButton
-            android:id="@+id/imgbCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:srcCompat="@drawable/icon_despesas" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:text="Despesas" />
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView8"
-        android:layout_width="88dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_nome_usuario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView6"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5"
-        app:layout_constraintVertical_bias="0.091"
-        tools:ignore="MissingConstraints">
-
-        <ImageButton
-            android:id="@+id/imgCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:srcCompat="@drawable/icon_subcategoria" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:text="Subcategoria" />
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView6"
-        android:layout_width="88dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_nome_usuario"
-        app:layout_constraintEnd_toStartOf="@+id/cardView8"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView7"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        app:layout_constraintVertical_bias="0.091"
-        tools:ignore="MissingConstraints">
-
-        <ImageButton
-            android:id="@+id/imgbCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:srcCompat="@drawable/icon_receitas" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:text="Receitas" />
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="88dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView4"
-        app:layout_constraintTop_toBottomOf="@+id/cardView10"
-        tools:ignore="MissingConstraints">
-
-        <ImageButton
-            android:id="@+id/imgbCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:srcCompat="@drawable/icon_categoria" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:text="Categoria" />
-    </android.support.v7.widget.CardView>
-
-
-    <Button
-        android:id="@+id/btn_nome_usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="user"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <android.support.v7.widget.CardView
         android:id="@+id/cardView10"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -258,5 +57,20 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="327dp" />
     </android.support.v7.widget.CardView>
+
+    <ListView
+        android:id="@+id/id_listview_home"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/bg_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView10" />
 
 </android.support.constraint.ConstraintLayout>
