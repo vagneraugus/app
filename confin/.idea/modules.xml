@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\Alfa_TCC\confin\app\app.iml" filepath="D:\Alfa_TCC\confin\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/confin.iml" filepath="$PROJECT_DIR$/confin.iml" />
+      <module fileurl="file://D:\Alfa_TCC\confin\confin.iml" filepath="D:\Alfa_TCC\confin\confin.iml" />
     </modules>
   </component>
 </project>
